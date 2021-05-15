@@ -1,0 +1,5 @@
+services:
+    jenkins:
+        build:
+            context: ./jenkins
+            dockerfile: Dockerfile
