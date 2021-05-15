@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: markyjackson
+Build-Jdk: 15.0.2
+Extension-Name: prometheus
+Specification-Title: Expose Jenkins metrics in prometheus format
+Specification-Vendor: Methodair
+Implementation-Vendor: Methodair
+Implementation-Title: prometheus
+Implementation-Version: 2.0.10
+Group-Id: org.jenkins-ci.plugins
+Short-Name: prometheus
+Long-Name: Prometheus metrics plugin
+Url: https://github.com/jenkinsci/prometheus-plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 2.0.10
+Hudson-Version: 2.222.4
+Jenkins-Version: 2.222.4
+Plugin-Dependencies: pipeline-rest-api:2.15,workflow-api:2.42,workflow
+ -job:2.40,workflow-step-api:2.23,workflow-support:3.8,cloudbees-disk-
+ usage-simple:0.10;resolution:=optional,jackson2-api:2.12.2,junit:1.28
+ ,metrics:4.0.2.7,pipeline-graph-analysis:1.9,script-security:1.76,str
+ ucts:1.22
+Plugin-Developers: Marky Jackson:devguy:
+Support-Dynamic-Loading: false
+Plugin-License-Name: Apache License, Version 2.0
+Plugin-License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
+Plugin-ScmUrl: https://github.com/jenkinsci/prometheus-plugin/
+
