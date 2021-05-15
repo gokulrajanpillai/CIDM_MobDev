@@ -9,3 +9,12 @@ services:
         volumes:
             - "./jenkins/data/var/jenkins_home:/var/jenkins_home"
         container_name: "jenkins_cidm"
+    artifactory:
+        build:
+            context: ./artifactory
+            dockerfile: Dockerfile
+        ports:
+            - "9081:8081"
+        volumes:
+            - "./artifactory/data/var/opt/jfrog/artifactory:/var/opt/jfrog/artifactory"
+        container_name: "artifactory_cidm"

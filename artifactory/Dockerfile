@@ -1,2 +1,3 @@
 FROM docker.bintray.io/jfrog/artifactory-oss:7.18.6
+ENV SERVER_XML_ARTIFACTORY_MAX_THREADS=500
 EXPOSE 8081
