@@ -18,3 +18,21 @@ services:
         volumes:
             - "./artifactory/data/var/opt/jfrog/artifactory:/var/opt/jfrog/artifactory"
         container_name: "artifactory_cidm"
+    grafana:
+        build:
+            context: ./grafana
+            dockerfile: Dockerfile
+        ports:
+            - "9082:3000"
+        volumes:
+            - "./grafana/data/var/lib/grafana:/var/lib/grafana"
+        container_name: "grafana_cidm"
+    prometheus:
+        build:
+            context: ./prometheus
+            dockerfile: Dockerfile
+        ports:
+            - "9090:9090"
+        volumes:
+            - "./prometheus/data/etc/prometheus:/etc/prometheus"
+        container_name: "prometheus_cidm"
