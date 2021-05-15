@@ -8,6 +8,7 @@ services:
             - "50001:50001"
         volumes:
             - "./jenkins/data/var/jenkins_home:/var/jenkins_home"
+        restart: always
         container_name: "jenkins_cidm"
     artifactory:
         build:
@@ -17,6 +18,7 @@ services:
             - "9081:8081"
         volumes:
             - "./artifactory/data/var/opt/jfrog/artifactory:/var/opt/jfrog/artifactory"
+        restart: always
         container_name: "artifactory_cidm"
     grafana:
         build:
@@ -26,6 +28,7 @@ services:
             - "9082:3000"
         volumes:
             - "./grafana/data/var/lib/grafana:/var/lib/grafana"
+        restart: always
         container_name: "grafana_cidm"
     prometheus:
         build:
@@ -35,4 +38,5 @@ services:
             - "9090:9090"
         volumes:
             - "./prometheus/data/etc/prometheus:/etc/prometheus"
+        restart: always
         container_name: "prometheus_cidm"
